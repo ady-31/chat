@@ -8,7 +8,6 @@ router.post("/signup", signup);
 
 router.post("/login", login);
 
-// Route to handle user logout
 router.post("/logout", logout);
 
 // Route to handle profile update, protected route
