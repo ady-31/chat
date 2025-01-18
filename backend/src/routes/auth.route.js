@@ -2,7 +2,6 @@ import express from "express";
 import { checkAuth, login, logout, signup, updateProfile } from "../controllers/auth.controller.js";
 import { protectRoute } from "../middleware/auth.middleware.js";
 
-// Create a new express router
 const router = express.Router()
 
 // Route to handle user signup
