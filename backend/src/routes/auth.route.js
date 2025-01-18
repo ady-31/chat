@@ -6,7 +6,6 @@ const router = express.Router()
 
 router.post("/signup", signup);
 
-// Route to handle user login
 router.post("/login", login);
 
 // Route to handle user logout
