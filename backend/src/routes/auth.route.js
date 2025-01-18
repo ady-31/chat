@@ -10,7 +10,6 @@ router.post("/login", login);
 
 router.post("/logout", logout);
 
-// Route to handle profile update, protected route
 router.put("/update-profile", protectRoute, updateProfile);
 
 // Route to check user authentication status, protected route
