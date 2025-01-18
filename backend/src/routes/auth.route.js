@@ -12,7 +12,6 @@ router.post("/logout", logout);
 
 router.put("/update-profile", protectRoute, updateProfile);
 
-// Route to check user authentication status, protected route
 router.get("/check", protectRoute, checkAuth);
 
 // Export the router to be used in other parts of the application
