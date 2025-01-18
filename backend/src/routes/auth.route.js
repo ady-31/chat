@@ -14,5 +14,4 @@ router.put("/update-profile", protectRoute, updateProfile);
 
 router.get("/check", protectRoute, checkAuth);
 
-// Export the router to be used in other parts of the application
 export default router;
