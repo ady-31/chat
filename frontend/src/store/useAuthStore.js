@@ -16,7 +16,8 @@ export const useAuthStore = create((set) => ({
             set({authUser:res.data})
         } catch (error){
             set({authUser:res.data})
-        }
+
+        } finally{}
     },
 
 }));
