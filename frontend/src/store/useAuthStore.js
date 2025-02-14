@@ -15,7 +15,7 @@ export const useAuthStore = create((set) => ({
 
             set({authUser:res.data})
         } catch (error){
-            cons
+            console.log("Error in checkAuth", error);
             set({authUser:res.data})
 
         } finally{
