@@ -11,7 +11,7 @@ import { useAuthStore } from "./store/useAuthStore";
 
 
 const App = () => {
-  const {authUser} = useAuthStore()
+  const {authUser, checkAuth} = useAuthStore()
 return(
   <div>
 
