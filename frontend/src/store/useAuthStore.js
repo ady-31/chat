@@ -15,9 +15,12 @@ export const useAuthStore = create((set) => ({
 
             set({authUser:res.data})
         } catch (error){
+            cons
             set({authUser:res.data})
 
-        } finally{}
+        } finally{
+            set ({ isCheckinAuth: false});
+        }
     },
 
 }));
