@@ -35,7 +35,9 @@ const SignUpPage = () => {
           <div/>
         <div/>
 
-         <form onSubmit={handleSubmit}></form>
+         <form onSubmit={handleSubmit} className="space-y-6">
+
+         </form>
     </div>
   </div>
 };
