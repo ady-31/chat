@@ -18,7 +18,10 @@ const SignUpPage = () => {
   }
 
   return (<div className="min-h-screen grid lg:grid-cols-2">
-    
+    { /*left wali side*/}
+    <div className="flex flex-col justify-center items-center p-6 sm:p-12">
+      
+    </div>
   </div>)
 };
 
