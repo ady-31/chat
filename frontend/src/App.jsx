@@ -6,7 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import SettingsPage from "./pages/SettingsPage";
 import ProfilePage from "./pages/ProfilePage";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuthStore } from "./store/useAuthStore";
 import { useEffect } from "react";
 import {Loader} from "lucide-react";
@@ -37,7 +37,7 @@ return(
   <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
   <Route path="/signup" element={<SignUpPage />} />
   <Route path="/login" element={<LoginPage />} />
-  <Route path="/settings" element={<SettingsPage />} />
+  <Route path="/settings" element={authUser ? <SettingsPage /> : <Navigate to="/login" />} />
   <Route path="/profile" element={<ProfilePage />} />
 </Routes>
 
