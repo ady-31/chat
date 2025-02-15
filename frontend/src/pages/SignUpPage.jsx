@@ -8,7 +8,7 @@ const SignUpPage = () => {
     password: "",
   });
 
-  const { signup, }
+  const { signup, isSigningUp }
 
   return (<div>SignUpPage</div>)
 };
