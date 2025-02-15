@@ -34,6 +34,8 @@ const SignUpPage = () => {
             <p className="text-base-content/60">Get started with your free account</p>
           <div/>
         <div/>
+
+         <form onSubmit={handleSubmit}></form>
     </div>
   </div>
 };
