@@ -23,4 +23,6 @@ export const useAuthStore = create((set) => ({
         }
     },
 
+    signup: async ({fullName, })
+
 }));
