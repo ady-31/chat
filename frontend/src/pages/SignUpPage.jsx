@@ -12,7 +12,9 @@ const SignUpPage = () => {
   const { signup, isSigningUp } = useAuthStore();
 
   const validateForm = () => {}
-  const 
+  const handleSubmit = (e) => {
+    
+  }
 
   return (<div>SignUpPage</div>)
 };
