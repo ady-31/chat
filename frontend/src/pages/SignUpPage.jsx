@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 const SignUpPage = () => {
-  const [showpassword, setShowPassword, ]
+  const [showpassword, setShowPassword] = useState(false)
   return (
     <div>SignUpPage</div>
   )
