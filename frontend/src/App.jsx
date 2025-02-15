@@ -20,7 +20,8 @@ const App = () => {
 
   console.log({ authUser});
 
-  if(isCheckingAuth && !authUser) return(
+  if(isCheckingAuth && !authUser)
+    return(
 
     <div className="flex items-center justify-center h-screen">
     <Loader className="size-10 animate-spin" />
@@ -33,7 +34,7 @@ return(
 <Navbar />
 
 <Routes>
-  <Route path="/" element={<HomePage />} />
+  <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
   <Route path="/signup" element={<SignUpPage />} />
   <Route path="/login" element={<LoginPage />} />
   <Route path="/settings" element={<SettingsPage />} />
