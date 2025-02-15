@@ -13,7 +13,7 @@ const SignUpPage = () => {
 
   const validateForm = () => {}
   const handleSubmit = (e) => {
-    
+    e.preventDefault()
   }
 
   return (<div>SignUpPage</div>)
