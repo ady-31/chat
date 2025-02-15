@@ -7,6 +7,9 @@ const SignUpPage = () => {
     email: "",
     password: "",
   });
+
+  const { signup, }
+
   return (<div>SignUpPage</div>)
 };
 
