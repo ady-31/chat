@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const useAuthStore = () => {
   const [authUser, setAuthUser] = useState(null);
