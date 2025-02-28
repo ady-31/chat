@@ -1,27 +1,31 @@
-import {create} from "zustand"
-import { axiosInstance } from "../lib/axios.js";
+import { useState, useEffect } from "react";
 
-export const useAuthStore = create((set) => ({
-    authUser: null,
-    isSigningUp: false,
-    isLoggingIng: false,
-    isUpdatingProfile: false,
+export const useAuthStore = () => {
+  const [authUser, setAuthUser] = useState(null);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true);
 
-    isCheckinAuth: true,
+  const checkAuth = async () => {
+    // Simulate an API call to check authentication
+    setIsCheckingAuth(true);
+    const user = await fakeAuthCheck();
+    setAuthUser(user);
+    setIsCheckingAuth(false);
+  };
 
-    checkAuth: async() => {
-        try{
-            const res = await axiosInstance.get("/auth/check");
+  const signup = async (formData) => {
+    // Simulate an API call to sign up the user
+    const user = await fakeSignup(formData);
+    setAuthUser(user);
+  };
 
-            set({authUser:res.data})
-        } catch (error){
-            console.log("Error in checkAuth", error);
-            set({authUser: null});
+  return {
+    authUser,
+    isCheckingAuth,
+    checkAuth,
+    signup,
+  };
+};
 
-        } finally{
-            set ({ isCheckinAuth: false});
-        }
-    },
-
-    signup: async (data) => {},
-}));
+// Simulated API calls
+const fakeAuthCheck = () => new Promise((resolve) => setTimeout(() => resolve(null), 1000));
+const fakeSignup = (formData) => new Promise((resolve) => setTimeout(() => resolve(formData), 1000));
